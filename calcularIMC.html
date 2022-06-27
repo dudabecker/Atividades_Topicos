@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta charset="UTF-8"/>
+
+<title>Calcula IMC</title>
+
+</head>
+
+<body>
+    <section class="calc-imc">
+        <h1>Calculadora IMC</h1>
+           
+        <form class="form" id="form" name="imc">
+            <input type="number" id="peso" placeholder="Seu peso">
+            <input type="number" id="altura" placeholder="Altura em centimetros">
+            <input onclick="calcular()" type="submit" id="Calcular" placeholder="Calcular">
+        </form>
+
+    </section>
+
+    <script>
+        function calcular() {
+          var peso = document.getElementById("peso").value;
+          var altura = document.getElementById("altura").value;
+
+          IMC = peso/(altura*altura);
+
+          if (IMC < 25) {
+            document.write("Seu IMC é " + IMC + " ,você está no peso ideal");}
+
+          if (IMC > 25) {
+            document.write("Seu IMC é " + IMC + " ,você está acima do peso");}
+        }
+    </script>
+
+</body>
+
+</html>

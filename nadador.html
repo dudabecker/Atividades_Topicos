@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta charset="UTF-8"/>
+
+<title>Média</title>
+
+</head>
+
+<body>
+    <section class="media">
+        <h1>Média</h1>
+           
+        <form class="form" id="form" name="imc">
+            <input type="idade" id="idade" placeholder="Sua idade">
+            <input onclick="calcular()" type="submit" id="Calcular" placeholder="Calcular">
+        </form>
+
+    </section>
+
+    <script>
+        function calcular() {
+          var idade = parseFloat(document.getElementById("idade").value);
+
+            if (idade >= 5 && idade <= 7) {
+            document.write("Sua categoria: INFANTIL A");}
+
+            if (idade >= 8 && idade <= 10) {
+            document.write("Sua categoria: INFANTIL B");}
+
+            if (idade >= 11 && idade <= 13) {
+            document.write("Sua categoria: JUVENIL A");}
+
+            if (idade >= 14 && idade <= 17) {
+            document.write("Sua categoria: JUVENIL B");}
+
+            if (idade >= 18) {
+            document.write("Sua categoria: ADULTO");}
+
+        }
+    </script>
+
+</body>
+
+</html>

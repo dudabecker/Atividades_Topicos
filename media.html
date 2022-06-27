@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta charset="UTF-8"/>
+
+<title>Média</title>
+
+</head>
+
+<body>
+    <section class="media">
+        <h1>Média</h1>
+           
+        <form class="form" id="form" name="imc">
+            <input type="number" id="nota1" placeholder="Sua primeira nota">
+            <input type="number" id="nota2" placeholder="Sua segunda nota">
+            <input type="number" id="nota3" placeholder="Sua terceira nota">
+            <input onclick="calcular()" type="submit" id="Calcular" placeholder="Calcular">
+        </form>
+
+    </section>
+
+    <script>
+        function calcular() {
+          var nota1 = parseFloat(document.getElementById("nota1").value);
+          var nota2 = parseFloat(document.getElementById("nota2").value);
+          var nota3 = parseFloat(document.getElementById("nota3").value);
+
+          MEDIA = (nota1 + nota2 + nota3)/3;
+
+          if (MEDIA < 6) {
+            document.write("Sua media é: " + MEDIA + " - REPROVADO");}
+
+          if (MEDIA >= 6) {
+            document.write("Sua media é: " + MEDIA + " - APROVADO");}
+        }
+    </script>
+
+</body>
+
+</html>
